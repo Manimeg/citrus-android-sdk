@@ -5,6 +5,7 @@
     -keep class com.citrus.** { *; } 
     -keep class com.citruspay.citrusbrowser.** { *; }
     -keep class com.google.** { *; }
+    -keep class com.zl.reik.** { *; }
     -keepattributes *Annotation*
 
     -keep,allowobfuscation @interface com.facebook.crypto.proguard.annotations.DoNotStrip
