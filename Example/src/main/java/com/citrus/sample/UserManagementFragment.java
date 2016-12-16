@@ -147,8 +147,10 @@ public class UserManagementFragment extends Fragment implements View.OnClickList
         String prefferedEmailID = prefs.getString(Utils.getResourceString(context, R.string.pref_email_id_key), Utils.getResourceString(context, R.string.dummy_email_hint));
         String prefferedMobileNum = prefs.getString(Utils.getResourceString(context, R.string.pref_mobile_num_key), Utils.getResourceString(context, R.string.dummy_mobile_hint));
 
-        editEmailId.setText(prefferedEmailID);
-        editMobileNo.setText(prefferedMobileNum);
+        if(!TextUtils.isEmpty(prefferedEmailID))
+            editEmailId.setText(prefferedEmailID);
+        if(!TextUtils.isEmpty(prefferedMobileNum))
+            editMobileNo.setText(prefferedMobileNum);
 
 
         return rootView;

@@ -16,7 +16,8 @@
             android:layout_margin="@dimen/button_margin"
             android:hint="@string/enter_email_text"
             android:inputType="textEmailAddress"
-            android:text="" />
+            android:text="@string/email"
+             /><!--android:text="@string/dummy_email_hint"-->
 
         <EditText
             android:id="@+id/edit_mobile_no"
@@ -26,15 +27,16 @@
             android:layout_margin="@dimen/button_margin"
             android:hint="@string/enter_mobile_text"
             android:inputType="number"
-            android:text="" />
+            android:text="@string/mobile"
+            /><!--android:text="@string/dummy_mobile_hint"-->
 
 
         <LinearLayout
             android:id="@+id/scopeCheckboxLayoutID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/edit_mobile_no"
-            android:visibility="visible">
+            android:visibility="visible"
+            android:layout_below="@id/edit_mobile_no">
 
             <CheckBox
                 android:id="@+id/fullScopeCheckBoxId"

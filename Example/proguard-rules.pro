@@ -6,9 +6,6 @@
 -keepclassmembers class fqcn.of.javascript.interface.for.webview {
    public *;
 }
--keepclassmembers class com.paytm.pgsdk.PaytmWebView$PaytmJavaScriptInterface {
-   public *;
-}
 
 -optimizationpasses 5
 
@@ -162,25 +159,28 @@
     public static int d(...);
 }
 
+
+
+##### Citrus SDK Config starts here....
+# Proguard Rules for Facebook Conceal
 # Keep our interfaces so they can be used by other ProGuard rules.
 # See http://sourceforge.net/p/proguard/bugs/466/
--keep,allowobfuscation @interface com.facebook.proguard.annotations.DoNotStrip
--keep,allowobfuscation @interface com.facebook.proguard.annotations.KeepGettersAndSetters
+-keep,allowobfuscation @interface com.facebook.crypto.proguard.annotations.DoNotStrip
+-keep,allowobfuscation @interface com.facebook.crypto.proguard.annotations.KeepGettersAndSetters
 
 # Do not strip any method/class that is annotated with @DoNotStrip
--keep @com.facebook.proguard.annotations.DoNotStrip class *
+-keep @com.facebook.crypto.proguard.annotations.DoNotStrip class *
 -keepclassmembers class * {
-    @com.facebook.proguard.annotations.DoNotStrip *;
+    @com.facebook.crypto.proguard.annotations.DoNotStrip *;
 }
 
--keepclassmembers @com.facebook.proguard.annotations.KeepGettersAndSetters class * {
+-keepclassmembers @com.facebook.crypto.proguard.annotations.KeepGettersAndSetters class * {
   void set*(***);
   *** get*();
 }
-
-
--keep class com.citrus.** { **; }
-
-
-
-
+#Core SDK Configuration
+-keep class javax.inject.** { *; }
+-keep class com.citrus.** {*;}
+-keep class com.citruspay.citrusbrowser.** { *; }
+#-keep class com.zl.reik.dilatingdotsprogressbar.DilatingDotDrawable { *; }
+-keep class com.zl.reik.** { *; }

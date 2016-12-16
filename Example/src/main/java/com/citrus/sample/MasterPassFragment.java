@@ -1,10 +1,12 @@
 package com.citrus.sample;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +18,8 @@ import com.citrus.sdk.classes.CitrusException;
 import com.citrus.sdk.payment.MasterPassOption;
 import com.citrus.sdk.payment.PaymentType;
 import com.citrus.sdk.response.CitrusError;
+import com.citruspay.graphics.AssetsHelper;
+import com.citruspay.graphics.BitmapCallBack;
 
 public class MasterPassFragment extends Fragment {
 
@@ -24,6 +28,8 @@ public class MasterPassFragment extends Fragment {
     private Utils.PaymentType paymentType = null;
 
     TextView txtPay = null;
+
+    ImageView imageView = null;
 
     public MasterPassFragment() {
         // Required empty public constructor
@@ -57,12 +63,28 @@ public class MasterPassFragment extends Fragment {
         // Inflate the layout for this fragment
         View returnView =  inflater.inflate(R.layout.fragment_masterpass, container, false);
         txtPay = (TextView) returnView.findViewById(R.id.btnMasterpass);
+
+        imageView = (ImageView) returnView.findViewById(R.id.imageView);
+
+        BitmapCallBack bitmapCallBack = new BitmapCallBack() {
+            @Override
+            public void onBitmapReceived(Bitmap bitmap) {
+                imageView.setImageBitmap(bitmap);
+            }
+
+            @Override
+            public void onBitmapFailed(Bitmap bitmap) {
+                imageView.setImageBitmap(bitmap);
+            }
+        };
         txtPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 payUsingMasterPass();
             }
         });
+
+        CitrusClient.getInstance(getActivity()).getMasterPassResource(AssetsHelper.MASTERPASS.BUTTON, bitmapCallBack);
         return returnView;
 
     }

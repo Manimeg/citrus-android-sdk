@@ -79,7 +79,7 @@ public class UIActivity extends AppCompatActivity implements UserManagementFragm
         fragmentManager = getSupportFragmentManager();
 
         citrusClient = CitrusClient.getInstance(mContext);
-        citrusClient.setLogLevel(CitrusLogger.LogLevel.DEBUG);
+        citrusClient.setLogLevel(CitrusLogger.LogLevel.OFF);
 
         initCitrusClient();
 
@@ -97,7 +97,6 @@ public class UIActivity extends AppCompatActivity implements UserManagementFragm
         layoutParams.gravity = Gravity.BOTTOM;
         snackBarParent.setLayoutParams(layoutParams);
         frameLayout.addView(snackBarParent);
-
     }
 
     @Override

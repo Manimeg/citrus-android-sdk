@@ -2,6 +2,7 @@ package com.citrus.sample;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,7 +61,9 @@ final class NetbankingAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                     RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) itemHolder.mTextView.getLayoutParams();
                     //params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
                     params.addRule(RelativeLayout.RIGHT_OF, itemHolder.mImageView.getId());
-                    params.addRule(RelativeLayout.END_OF, itemHolder.mImageView.getId());
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                        params.addRule(RelativeLayout.END_OF, itemHolder.mImageView.getId());
+                    }
 
                     params.addRule(RelativeLayout.CENTER_VERTICAL, itemHolder.mImageView.getId());
                     itemHolder.mTextView.setLayoutParams(params); //causes layout update
@@ -77,7 +80,9 @@ final class NetbankingAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                     RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) itemHolder.mTextView.getLayoutParams();
                     //params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
                     params.addRule(RelativeLayout.RIGHT_OF, itemHolder.mImageView.getId());
-                    params.addRule(RelativeLayout.END_OF, itemHolder.mImageView.getId());
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                        params.addRule(RelativeLayout.END_OF, itemHolder.mImageView.getId());
+                    }
 
                     params.addRule(RelativeLayout.CENTER_VERTICAL, itemHolder.mImageView.getId());
                     itemHolder.mTextView.setLayoutParams(params); //causes layout update

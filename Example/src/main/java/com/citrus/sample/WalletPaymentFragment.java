@@ -34,6 +34,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -119,6 +120,8 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
     private Button btnautoload;
     private ImageButton btnMasterPass = null;
 
+    private CheckBox tamperTokenCheckBox = null;
+
     SubscriptionResponse activeSubscription;
     private Button btnWalletPGPayment = null;
 
@@ -162,7 +165,6 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_wallet_payment, container, false);
 
-
         btnGetBalance = (Button) rootView.findViewById(R.id.btn_get_balance);
         btnLoadMoney = (Button) rootView.findViewById(R.id.btn_load_money);
         btnNewPayUsingCash = (Button) rootView.findViewById(R.id.btn_new_pay_using_cash);
@@ -178,6 +180,7 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
         btnGetProfile = (Button) rootView.findViewById(R.id.btn_get_profile);
 
         btnautoload = (Button) rootView.findViewById(R.id.btn_autoLoad);
+
         // btnMasterPass = (ImageButton) rootView.findViewById(R.id.btnMasterpass);
         btnGetBalance.setOnClickListener(this);
         btnLoadMoney.setOnClickListener(this);
@@ -1051,7 +1054,6 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
             });
         }
     }
-
 
 
     //we will use the same method to update subscription to lower and higher value

@@ -32,6 +32,9 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+//            signingConfig signingConfigs.release
         }
         debug {
             minifyEnabled false
@@ -59,7 +62,7 @@ android {
 
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
-    compile 'com.citruspay.sdk:payment-sdk:4.0.52'
+    compile 'com.citruspay.sdk:payment-sdk:4.1.0'
 
     compile 'com.android.support:support-v4:24.2.1'
     compile 'com.mcxiaoke.viewpagerindicator:library:2.4.1@aar'
@@ -70,5 +73,5 @@ dependencies {
         transitive = true;
     }
     compile 'com.jakewharton:butterknife:8.4.0'
-//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }

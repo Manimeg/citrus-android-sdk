@@ -109,7 +109,7 @@ public class UpdateProfileFragment extends Fragment {
 
                     @Override
                     public void error(CitrusError error) {
-
+                        Toast.makeText(context, error.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
             }

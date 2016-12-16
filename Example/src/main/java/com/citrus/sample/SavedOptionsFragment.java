@@ -320,7 +320,9 @@ public class SavedOptionsFragment extends Fragment {
 
                 @Override
                 public void error(CitrusError error) {
-                    ((UIActivity) getActivity()).showSnackBar(error.getMessage());
+                    if (getActivity() != null) {
+                        ((UIActivity) getActivity()).showSnackBar(error.getMessage());
+                    }
                 }
             });
 
