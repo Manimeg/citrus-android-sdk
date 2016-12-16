@@ -41,4 +41,4 @@ citrusLoginApi.setListener(new CitrusLoginApi.CitrusLoginApiListener() {
 
 ```
 
-For further details please refer <a href="docs/Unified%20Login%20API.md#unified-login-api-interface-document" target="_blank">here</a>.
+For further details please refer <a href="Unified%20Login%20API.md#unified-login-api-interface-document" target="_blank">here</a>.

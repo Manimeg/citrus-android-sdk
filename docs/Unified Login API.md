@@ -67,6 +67,18 @@ citrusLoginApi.setLoginProcessor(new CitrusLoginApi.LoginProcessor(getActivity()
       public void onShowLoginScreen(FindUserResponse findUserResponse, CitrusLoginApi citrusLoginApi) {
           // Display your own login screen.
       }
+      
+      /**
+         * This is called when the password or otp entered is incorrect. Override this when you want to
+         * display error message on login screen.
+         *
+         * @param passwordType
+         * @param error
+         */
+	@Override
+	public void onLoginError(PasswordType passwordType, CitrusError error) {
+
+	}
 
       @Override
       public PasswordType getPasswordType() {
