@@ -33,9 +33,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.citrus.sample.UIActivity" />
         </activity>
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="fabaabc4273e4e67d52a5410e9b2fa7a59088976" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

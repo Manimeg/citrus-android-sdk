@@ -48,9 +48,6 @@ import com.citrus.sdk.response.CitrusError;
 import com.citrus.sdk.response.CitrusResponse;
 import com.citrus.sdk.response.PaymentResponse;
 import com.citruspay.graphics.AssetDownloadManager;
-import com.crashlytics.android.Crashlytics;
-
-import io.fabric.sdk.android.Fabric;
 
 
 public class UIActivity extends AppCompatActivity implements UserManagementFragment.UserManagementInteractionListener, WalletFragmentListener {
@@ -68,7 +65,6 @@ public class UIActivity extends AppCompatActivity implements UserManagementFragm
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_ui);
 
         activity = this;
