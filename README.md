@@ -3,24 +3,9 @@
 Welcome to the open-source Android SDK Documentation of Citrus Payments Solution!
 #### Update your project’s build.gradle
 ```groovy
-compile 'com.citruspay.sdk:payment-sdk:4.1.0'
+compile 'com.citruspay.sdk:payment-sdk:4.1.1'
 ```
-From version 4.1.0 Citrus SDK supports Android version 24 and is compiled against Android version 24.
-Make following changes to make your application's build.gradle file.
 
-```groovy
-android {
-    defaultConfig {
-        jackOptions {
-            enabled true
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-}
-```
 
 #### [Migration from older version to Version 4.x.x](docs/Migration_Guide.md)
 
