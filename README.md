@@ -95,9 +95,6 @@ ___
 #####Dynamic Pricing Offer Coupons and Surcharge
 * [How to use dynamic pricing ?](https://github.com/citruspay/citrus-android-sdk/blob/master/docs/dynamic_pricing_coupons.md)
 
-<b>One Tap Card Payment</b>
-* <a href="docs/OneTap Payment.md" target="_blank">One Tap Card Payment</a>
-
 <b>AutoLoad</b>
 * <a href="docs/AutoLoad.md" target="_blank">Auto Load</a>
 
