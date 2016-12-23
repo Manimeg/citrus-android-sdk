@@ -1,5 +1,11 @@
 | Version History<br>Last updated : 08/09/2016 |  Feature Updates|
 | :-------------: | :------------- |
+| v4.1.1| * Removed Jack Compatibility  |
+| | * Support for dynamic assets|
+| | * Removed OneTapPayment Support |
+| | * Removed native conceal library|
+| | * SDK Size reduced by 4%  |
+| | * SDK Impact reduced by 300KB|
 | v4.1.0| * Unified Login Apis (SDK will present login screen to simplify integration)  |
 | | * Support for dynamic assets|
 | | * Integrating Flash (A unique way to make card payments with beatiful UI) |
