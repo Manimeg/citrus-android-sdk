@@ -1,6 +1,7 @@
 <b>Updating to SDK version 4.x.x from previous version</b>
 * SDK Version 4.x.x  is major release where Network layer of SDK has been changed from Retrofit to Volley.
 * SDK size reduced by 17%
+* Removed One Tap Payment Support.
 * If you are upgrading SDK to 4.x.x following dependencies should be removed from your build.gradle
 
   <b>for Retrofit 1.9</b>
