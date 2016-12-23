@@ -86,6 +86,9 @@ ___
 <b>How to save Cards option and Banks</b>
 * <a href="docs/Save%20payment%20option.md" target="_blank">Save Debit/Credit Card and Net banking</a>
 
+<b>LazyPay</b>
+* <a href="docs/lazyPay.md" target="_blank">LazyPay</a>
+
 <b>Others...</b>
 * <a href="docs/Send%20Money.md" target="_blank">Send Money To Your Friend</a>
 * <a href="docs/Withdraw.md" target="_blank">Withdraw Money to Your Account</a>
