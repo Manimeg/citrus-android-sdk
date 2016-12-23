@@ -52,7 +52,7 @@
   </tr>
   <tr align="center">
     <th>appcompat-v7</th>
-    <th>23.1.0</th>
+    <th>23.0.1</th>
     <th>compile 'com.android.support:appcompat-v7:23.0.1'</th>
   </tr>
   <tr align="center">
