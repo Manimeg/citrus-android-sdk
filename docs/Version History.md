@@ -1,7 +1,6 @@
 | Version History<br>Last updated : 08/09/2016 |  Feature Updates|
 | :-------------: | :------------- |
 | v4.1.1| * Removed Jack Compatibility  |
-| | * Support for dynamic assets|
 | | * Removed OneTapPayment Support |
 | | * Removed native conceal library|
 | | * SDK Size reduced by 4%  |
