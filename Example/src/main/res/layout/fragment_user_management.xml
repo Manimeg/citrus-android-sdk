@@ -16,7 +16,6 @@
             android:layout_margin="@dimen/button_margin"
             android:hint="@string/enter_email_text"
             android:inputType="textEmailAddress"
-            android:text="@string/email"
              /><!--android:text="@string/dummy_email_hint"-->
 
         <EditText
@@ -27,7 +26,6 @@
             android:layout_margin="@dimen/button_margin"
             android:hint="@string/enter_mobile_text"
             android:inputType="number"
-            android:text="@string/mobile"
             /><!--android:text="@string/dummy_mobile_hint"-->
 
 

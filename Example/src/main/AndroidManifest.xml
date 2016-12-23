@@ -4,10 +4,6 @@
     android:versionCode="12"
     android:versionName="12.0">
 
-    <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="23" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -33,6 +29,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.citrus.sample.UIActivity" />
         </activity>
+
+        <activity android:name=".CitrusLpExampleActivity" android:theme="@style/myapptheme"></activity>
+
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

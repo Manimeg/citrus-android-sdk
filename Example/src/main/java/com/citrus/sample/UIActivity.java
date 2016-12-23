@@ -41,7 +41,10 @@ import com.citrus.sdk.classes.Amount;
 import com.citrus.sdk.classes.CashoutInfo;
 import com.citrus.sdk.classes.CitrusConfig;
 import com.citrus.sdk.classes.CitrusException;
+import com.citrus.sdk.classes.Month;
+import com.citrus.sdk.classes.Year;
 import com.citrus.sdk.logger.CitrusLogger;
+import com.citrus.sdk.payment.CreditCardOption;
 import com.citrus.sdk.payment.PaymentBill;
 import com.citrus.sdk.payment.PaymentType;
 import com.citrus.sdk.response.CitrusError;
@@ -49,6 +52,8 @@ import com.citrus.sdk.response.CitrusResponse;
 import com.citrus.sdk.response.PaymentResponse;
 import com.citruspay.graphics.AssetDownloadManager;
 
+
+import com.citruspay.lazypay.common.LazyPay;
 
 public class UIActivity extends AppCompatActivity implements UserManagementFragment.UserManagementInteractionListener, WalletFragmentListener {
 
@@ -75,7 +80,7 @@ public class UIActivity extends AppCompatActivity implements UserManagementFragm
         fragmentManager = getSupportFragmentManager();
 
         citrusClient = CitrusClient.getInstance(mContext);
-        citrusClient.setLogLevel(CitrusLogger.LogLevel.OFF);
+        citrusClient.setLogLevel(CitrusLogger.LogLevel.DEBUG);
 
         initCitrusClient();
 
@@ -84,7 +89,6 @@ public class UIActivity extends AppCompatActivity implements UserManagementFragm
         citrusConfig.setColorPrimary(Constants.colorPrimary);
         citrusConfig.setColorPrimaryDark(Constants.colorPrimaryDark);
         citrusConfig.setTextColorPrimary(Constants.textColor);
-        citrusConfig.enableOneTapPayment(Constants.ENABLE_ONE_TAP_PAYMENT);
         showUI();
 
 
@@ -93,6 +97,11 @@ public class UIActivity extends AppCompatActivity implements UserManagementFragm
         layoutParams.gravity = Gravity.BOTTOM;
         snackBarParent.setLayoutParams(layoutParams);
         frameLayout.addView(snackBarParent);
+
+        CreditCardOption creditCardOption = new CreditCardOption("Mangesh", "4386280018570121", "123", Month.AUG, Year._2020);
+
+
+
     }
 
     @Override
@@ -364,6 +373,7 @@ public class UIActivity extends AppCompatActivity implements UserManagementFragm
                 if (settingsChanged) {
                     Utils.updateMerchantSignatures(this);
                     citrusClient.destroy();
+                    LazyPay.destroy();
                     citrusClient.init(Constants.SIGNUP_ID, Constants.SIGNUP_SECRET, Constants.SIGNIN_ID, Constants.SIGNIN_SECRET, Constants.VANITY, Constants.environment);
 
                     String preferredEnv = Utils.getPreferredEnvironment(this);

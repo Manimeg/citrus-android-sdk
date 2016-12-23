@@ -20,6 +20,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -34,7 +35,6 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -120,10 +120,9 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
     private Button btnautoload;
     private ImageButton btnMasterPass = null;
 
-    private CheckBox tamperTokenCheckBox = null;
-
     SubscriptionResponse activeSubscription;
     private Button btnWalletPGPayment = null;
+    private Button btnLazyPay ;
 
     private SavedOptionsAdapter savedOptionsAdapter = null;
 
@@ -165,6 +164,7 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_wallet_payment, container, false);
 
+
         btnGetBalance = (Button) rootView.findViewById(R.id.btn_get_balance);
         btnLoadMoney = (Button) rootView.findViewById(R.id.btn_load_money);
         btnNewPayUsingCash = (Button) rootView.findViewById(R.id.btn_new_pay_using_cash);
@@ -178,6 +178,7 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
 
         btnUpdateProfile = (Button) rootView.findViewById(R.id.btn_update_profile);
         btnGetProfile = (Button) rootView.findViewById(R.id.btn_get_profile);
+        btnLazyPay  = (Button) rootView.findViewById(R.id.btn_lazypay_payment );
 
         btnautoload = (Button) rootView.findViewById(R.id.btn_autoLoad);
 
@@ -194,6 +195,7 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
         btnPerformDP.setOnClickListener(this);
         btnUpdateProfile.setOnClickListener(this);
         btnGetProfile.setOnClickListener(this);
+        btnLazyPay.setOnClickListener(this);
         btnautoload.setOnClickListener(this);
 
         btnPerformDP.setVisibility(View.VISIBLE);
@@ -302,6 +304,9 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
             case R.id.btn_get_profile:
                 getProfile();
                 break;
+            case R.id.btn_lazypay_payment:
+                lpPayment();
+                break;
             case R.id.btn_autoLoad:
                 autoLoad();
         }
@@ -346,6 +351,11 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
 
     private void pgPayment() {
         showPrompt(PG_PAYMENT);
+    }
+
+    private void lpPayment() {
+        final Intent lpIntent = new Intent( getContext(), CitrusLpExampleActivity.class );
+        startActivity( lpIntent );
     }
 
     private void walletPGPayment() {
@@ -1054,6 +1064,7 @@ public class WalletPaymentFragment extends Fragment implements View.OnClickListe
             });
         }
     }
+
 
 
     //we will use the same method to update subscription to lower and higher value

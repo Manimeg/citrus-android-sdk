@@ -46,8 +46,8 @@ final class NetbankingAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int index) {
 
-        NetbankingViewHolder itemHolder = (NetbankingViewHolder) viewHolder;
-        NetbankingOption netbankingOption = getItem(index);
+        final NetbankingViewHolder itemHolder = (NetbankingViewHolder) viewHolder;
+        final NetbankingOption netbankingOption = getItem(index);
 
         if (netbankingOption != null) {
 

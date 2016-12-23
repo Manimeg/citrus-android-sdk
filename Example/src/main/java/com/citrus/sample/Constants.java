@@ -19,7 +19,6 @@ public final class Constants {
     public static Environment environment = Environment.SANDBOX;
 
     public static boolean enableLogging = true;
-    public static boolean ENABLE_ONE_TAP_PAYMENT = true;
 
     public static String colorPrimaryDark = "#E7961D";
     public static String colorPrimary = "#F9A323";

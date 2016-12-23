@@ -49,7 +49,7 @@ final class SavedOptionsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int index) {
 
-        SavedOptionsViewHolder itemHolder = (SavedOptionsViewHolder) viewHolder;
+        final SavedOptionsViewHolder itemHolder = (SavedOptionsViewHolder) viewHolder;
         PaymentOption paymentOption = getItem(index);
 
         if (paymentOption != null) {

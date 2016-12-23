@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.citrus.sdk.Callback;
 import com.citrus.sdk.CardSchemeCallBack;
@@ -105,12 +106,7 @@ public class CreditDebitCardFragment extends Fragment implements View.OnClickLis
         submitButton = (TextView) returnView.findViewById(R.id.load);
         checkBoxSaveCard = (CheckBox) returnView.findViewById(R.id.checkboxSaveCard);
 
-        // If one tap payment is enabled, no need to display the save card button, since one tap payment already saves the card
-        if (Constants.ENABLE_ONE_TAP_PAYMENT) {
-            checkBoxSaveCard.setVisibility(View.GONE);
-        } else {
-            checkBoxSaveCard.setVisibility(View.VISIBLE);
-        }
+
 
         submitButton.setOnClickListener(this);
 
@@ -230,7 +226,7 @@ public class CreditDebitCardFragment extends Fragment implements View.OnClickLis
         citrusClient.savePaymentOption(paymentOption, new Callback<CitrusResponse>() {
             @Override
             public void success(CitrusResponse citrusResponse) {
-                ((UIActivity) getActivity()).showSnackBar(citrusResponse.getMessage());
+                Toast.makeText(getActivity(), "Card Saved Successfully.", Toast.LENGTH_SHORT).show();
             }
 
             @Override

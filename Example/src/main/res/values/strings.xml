@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="title_activity_main">MainActivity</string>
-    <string name="app_name">Citrus Merchant</string>
     <string name="hello_world">Hello world!</string>
     <string name="card_number_hint">Enter card number</string>
     <string name="credit_card_number_hint">Enter Credit Card number</string>
@@ -134,7 +133,5 @@
     <string name="action_clear_cache">Clear Cache</string>
 
     <string name="masterpassdetails">You will be directed to masterpass site to complete the transaction.</string>
-    <string name="email" />
-    <string name="mobile" />
 
 </resources>

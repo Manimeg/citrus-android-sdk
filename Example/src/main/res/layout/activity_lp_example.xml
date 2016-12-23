@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".CitrusLpExampleActivity"
+    android:layout_centerVertical="true"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LazyPay Demo"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/edit_email_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/edit_mobile_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Mobile"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/edit_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Amount in INR"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="Check Merchant Eligibility"
+            android:onClick="onCheckEligibilityClicked"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="LazyPay Now"
+            android:onClick="onLazyPayNowClicked"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_16_sp"
+        android:layout_marginTop="10dp"
+        android:text="\u00A9 CitrusPay"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textAllCaps="false"
+        android:text="Sign out from LazyPay"
+        android:onClick="onLpSignOutClicked"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

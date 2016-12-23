@@ -14,21 +14,14 @@ repositories {
 }
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '24.0.3'
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 23
         applicationId 'com.citruspay.sdk.sample'
-        jackOptions {
-            enabled true
-        }
     }
-
-
-
-
 
     buildTypes {
         release {
@@ -38,8 +31,9 @@ android {
 
         }
         debug {
-            minifyEnabled false
-
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
         }
     }
     lintOptions {
@@ -55,22 +49,22 @@ android {
         resolutionStrategy.force 'com.android.support:support-annotations:23.0.1'
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
-    compile 'com.citruspay.sdk:payment-sdk:4.1.0'
 
-    compile 'com.android.support:support-v4:24.2.1'
+    compile ( 'com.citruspay.lazypay:lazypay-sdk:1.0' ) {
+        exclude group: 'com.citruspay.sdk', module: 'payment-sdk'
+    }
+    compile 'com.citruspay.sdk:payment-sdk:4.1.1'
+
+    compile 'com.android.support:support-v4:23.0.1'
     compile 'com.mcxiaoke.viewpagerindicator:library:2.4.1@aar'
-    compile 'com.android.support:cardview-v7:24.2.1'
-    compile 'com.android.support:recyclerview-v7:24.2.1'
-    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:cardview-v7:23.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
 
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'

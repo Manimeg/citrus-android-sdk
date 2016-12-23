@@ -60,6 +60,13 @@
             android:text="New PG Payment" />
 
         <Button
+            android:id="@+id/btn_lazypay_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_margin"
+            android:text="Lazy Pay" />
+
+        <Button
             android:id="@+id/btn_wallet_pg_payment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -166,14 +173,5 @@
             android:text="Update Subscription"
             android:id="@+id/btUpdateSubscription"
             android:layout_gravity="center_horizontal" />
-
-       <!-- <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Update Subscription to higher value"
-            android:id="@+id/btUpdateSubscriptiontohighervalue"
-            android:layout_gravity="center_horizontal" />-->
-
-
     </LinearLayout>
 </ScrollView>

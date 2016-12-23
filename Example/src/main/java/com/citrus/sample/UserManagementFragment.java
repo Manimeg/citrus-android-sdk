@@ -169,6 +169,7 @@ public class UserManagementFragment extends Fragment implements View.OnClickList
                 .mobile(mobileNo)
                 .email(emailId)
                 .accessType(accessType)
+                .environment( citrusClient.getEnvironment() )
                 .build();
 
         boolean useCitrusLoginScreen = prefs.getBoolean(getString(R.string.pref_show_citrus_login_screen), true);

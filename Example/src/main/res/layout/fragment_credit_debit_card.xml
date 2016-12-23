@@ -208,7 +208,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/expiryLayout"
                 android:text="Save Card For Future Use"
-                android:visibility="gone"/>
+                android:visibility="visible"/>
 
             <TextView
                 android:id="@+id/load"
