@@ -27,7 +27,7 @@ gradle configuration -
     
 ### Update your app module’s build.gradle - 
     // to add the optional LazyPay SDK
-    compile ( 'com.citruspay.lazypay:lazypay-sdk:0.9-beta' ) {
+    compile ( 'com.citruspay.lazypay:lazypay-sdk:1.0' ) {
         // exclude the core payment SDK that comes with the LazyPay SDK
         exclude group: 'com.citruspay.sdk', module: 'payment-sdk'
         }
