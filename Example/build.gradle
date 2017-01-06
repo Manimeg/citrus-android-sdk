@@ -55,10 +55,10 @@ android {
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
 
-    compile ( 'com.citruspay.lazypay:lazypay-sdk:1.0' ) {
+    compile ( 'com.citruspay.lazypay:lazypay-sdk:1.1' ) {
         exclude group: 'com.citruspay.sdk', module: 'payment-sdk'
     }
-    compile 'com.citruspay.sdk:payment-sdk:4.1.1'
+    compile 'com.citruspay.sdk:payment-sdk:4.1.2'
 
     compile 'com.android.support:support-v4:23.0.1'
     compile 'com.mcxiaoke.viewpagerindicator:library:2.4.1@aar'

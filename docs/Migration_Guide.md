@@ -31,7 +31,7 @@
   and is used in your build.gradle instead of just changing version.
 
 ```groovy
-	compile 'com.citruspay.sdk:payment-sdk:4.1.1'
+	compile 'com.citruspay.sdk:payment-sdk:4.1.2'
 ```
 
 <b>Note</b>
@@ -78,7 +78,7 @@
 
   If your app also uses volley library, you can exclude volley from Citrus SDK. Add following compile dependency to your build gradle
 ```groovy
- compile ('com.citruspay.sdk:payment-sdk:4.1.1@aar') {
+ compile ('com.citruspay.sdk:payment-sdk:4.1.2@aar') {
  transitive = true; exclude module: 'volley'
  }
 ```
@@ -90,7 +90,7 @@
    netbankingOption.getOptionIcon(context);
  ```
  
- * SDK Version 4.1.1 
+ * SDK Version 4.1.2
  ```groovy
    netbankingOption.getBitmap(new BitmapCallBack() {
 	@Override
@@ -112,7 +112,7 @@
    //paymentOption is object of either Credit/Debit or Saved Credit/Debit Card.
  ```
  
- * SDK Version 4.1.1 
+ * SDK Version 4.1.2
  ```groovy
    //paymentOption is object of either Credit/Debit or Saved Credit/Debit Card. 	
    ((CardOption)paymentOption).getBitmap(new BitmapCallBack() {
@@ -143,7 +143,7 @@
    DebitCardOption creditCardOption = new DebitCardOption(token, cvv);
  ```
  
- * SDK Version 4.1.1
+ * SDK Version 4.1.2
    For Credit Card  	
    
  ```groovy
