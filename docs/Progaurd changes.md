@@ -7,7 +7,7 @@
     -keep class com.google.** { *; }
     -keep class com.zl.reik.** { *; }
     -keepattributes *Annotation*
-#Add Following pro-guard rules for LAZYPAY SDK
+
 
 
 
