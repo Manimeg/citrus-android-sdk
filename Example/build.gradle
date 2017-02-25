@@ -25,7 +25,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard-rules.pro'
 
@@ -58,7 +58,7 @@ dependencies {
     compile ( 'com.citruspay.lazypay:lazypay-sdk:1.1' ) {
         exclude group: 'com.citruspay.sdk', module: 'payment-sdk'
     }
-    compile 'com.citruspay.sdk:payment-sdk:4.1.2'
+    compile 'com.citruspay.sdk:payment-sdk:4.1.5'
 
     compile 'com.android.support:support-v4:23.0.1'
     compile 'com.mcxiaoke.viewpagerindicator:library:2.4.1@aar'

@@ -2,6 +2,7 @@
 <resources>
     <string name="title_activity_main">MainActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="app_name">Citrus SDK Sample App</string>
     <string name="card_number_hint">Enter card number</string>
     <string name="credit_card_number_hint">Enter Credit Card number</string>
     <string name="card_name_hint">Enter card holder name</string>
