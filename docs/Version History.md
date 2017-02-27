@@ -1,6 +1,6 @@
 | Version History<br>Last updated : 24/02/2017 |  Feature Updates|
 | :-------------: | :------------- |
-| v4.1.5| * Citrus Wallet Rebranding|
+| v4.1.6| * Citrus Wallet Rebranding|
 | v4.1.1| * Removed Jack Compatibility  |
 | | * Removed OneTapPayment Support |
 | | * Removed native conceal library|
