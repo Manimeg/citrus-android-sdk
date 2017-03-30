@@ -11,6 +11,7 @@ CitrusLoginApi citrusLoginApi = new CitrusLoginApi.Builder(getActivity())
                           .mobile(mobileNo)
                           .email(emailId)
                           .accessType(AccessType.LIMITED)
+                          .environment(Environment.SANDBOX)
                           .build();
 ```
 
