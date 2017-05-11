@@ -55,7 +55,7 @@ android {
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
 
-    compile ( 'com.citruspay.lazypay:lazypay-sdk:1.1' ) {
+    compile ( 'com.citruspay.lazypay:lazypay-sdk:1.2' ) {
         exclude group: 'com.citruspay.sdk', module: 'payment-sdk'
     }
     compile 'com.citruspay.sdk:payment-sdk:4.1.6'
