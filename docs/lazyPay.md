@@ -27,12 +27,12 @@ gradle configuration -
     
 ### Update your app module’s build.gradle - 
     // to add the optional LazyPay SDK
-    compile ( 'com.citruspay.lazypay:lazypay-sdk:1.1' ) {
+    compile ( 'com.citruspay.lazypay:lazypay-sdk:1.2' ) {
         // exclude the core payment SDK that comes with the LazyPay SDK
         exclude group: 'com.citruspay.sdk', module: 'payment-sdk'
         }
     // & add the core payment SDK version of your choice. Better to select most recent version. Should be atleast 4.1.2
-    compile 'com.citruspay.sdk:payment-sdk:4.1.2'
+    compile 'com.citruspay.sdk:payment-sdk:4.1.6'
 
 <b> This SDK has following flows:  </b>
 <ol type="1">
@@ -58,12 +58,19 @@ gradle configuration -
 
 <p>Accordingly, the LazyPay SDK contains 3 screens:</p>
 <ol type="1">
-  <li><b>The Welcome Screen</b> which is like a splash screen.</br>On clicking the 'LazyPay Now' button on the Welcome screen, the eligibility is checked.</br>If user is ineligible, an error message is shown & he cannot proceed further.</br>If User is eligible, SDK detects if user is qualified for Auto-Debit i.e. if user is a Repeat user.
+  <li><b>The Welcome Screen</b></br>Here It first checks the eligibility of the user.</br>If user is ineligible, an error message is shown & he cannot proceed further.</br>If User is eligible, SDK detects if user is qualified for Auto-Debit i.e. if user is a Repeat user.
         <ul>
-          <li>If User is a Repeat-User, the payment is immediately processed. There is no seperate UI screen for this type of payment</li>
-          <li>If User is not a Repeat User, the payment is only 'initiated', but not completed at this stage.</li>
+          <li>If User is a Repeat-User, It gives an option to process the payment right away i.e "Place Order" after clicking on the "Place Order" the payment is immediately processed.</li>
+          <li>If User is not a Repeat User, It shows option as per the payment mode.
+          <ul>
+          <li> Otp Payment Mode: It shows an option to proceed with OTP i.e "Confirm with OTP".</li>
+          <li> Sign Up Payment Mode: It shows option to proceed with Sign Up i.e "Sign up"
+          </ul>
+          </li>
         </ul>
-User can go back from this screen. No transaction is initiated if user goes back from here.</li>
+Note: Transaction is not yet initiated at this stage user can go back from this screen.
+
+The transaction will initiate after a user clicks on one of the options "Confirm with OTP" or "Sign up". And it will redirect the user to respective flow.</li>
   <li><b>The Credit Card Screen</b> - represents the Credit Card flow</br>After initiating payment, if user is unregistered, Credit Card screen is shown. User has to enter the card details & proceed for payment.</li>
   <li> <b>The OTP Screen</b> - represents the OTP flow</br>After initiating payment, if user is Registered User, then the OTP screen is shown. User has to enter the OTP received on his mobile & proceed for payment. User can also re-generate the OTP for some limited number of times, decided by the server.</li>
   </ol>
